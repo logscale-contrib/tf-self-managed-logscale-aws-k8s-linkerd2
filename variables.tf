@@ -16,12 +16,3 @@ variable "eks_oidc_provider_arn" {
 }
 
 
-variable "domain_is_private" {
-  type        = bool
-  default     = false
-  description = "(optional) describe your variable"
-}
-variable "domain_name" {
-  type        = string
-  description = "(optional) describe your variable"
-}
