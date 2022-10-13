@@ -181,3 +181,22 @@ resource "helm_release" "kube-system" {
   #     EOF
   #   ]
 }
+
+
+resource "helm_release" "viz" {
+  depends_on = [
+    helm_release.linkerd-crds,
+    kubernetes_labels.kube_system
+  ]
+
+  name       = "linkerd-viz"
+  namespace  = "linkerd"
+  repository = "https://helm.linkerd.io/stable"
+  version    = "30.3.3"
+  chart      = "linkerd2-viz"
+  # create_namespace = 
+  #   values = [<<EOF
+  # priorityClassName: system-node-critical
+  #     EOF
+  #   ]
+}
