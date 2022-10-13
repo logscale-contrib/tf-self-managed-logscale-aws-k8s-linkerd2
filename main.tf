@@ -65,7 +65,7 @@ resource "helm_release" "linkerd" {
   name       = "linkerd"
   namespace  = "linkerd"
   repository = "https://helm.linkerd.io/stable"
-  version    = "1.9.0"
+  version    = "1.9.3"
   chart      = "linkerd-control-plane"
   timeout    = 600
 
@@ -173,7 +173,7 @@ resource "helm_release" "kube-system" {
   name       = "linkerd-cni"
   namespace  = "linkerd"
   repository = "https://helm.linkerd.io/stable"
-  version    = "30.3.0"
+  version    = "30.3.3"
   chart      = "linkerd2-cni"
   # create_namespace = 
   #   values = [<<EOF
