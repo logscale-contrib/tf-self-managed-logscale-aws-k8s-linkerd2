@@ -65,7 +65,7 @@ resource "helm_release" "linkerd" {
   name       = "linkerd"
   namespace  = "linkerd"
   repository = "https://helm.linkerd.io/stable"
-  version    = "1.9.3"
+  version    = "1.9.5"
   chart      = "linkerd-control-plane"
   timeout    = 600
 
