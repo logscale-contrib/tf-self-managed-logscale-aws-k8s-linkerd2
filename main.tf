@@ -51,7 +51,7 @@ resource "helm_release" "linkerd-crds" {
   name             = "linkerd-crds"
   namespace        = "linkerd"
   repository       = "https://helm.linkerd.io/stable"
-  version          = "1.4.0"
+  version          = "1.8.0"
   chart            = "linkerd-crds"
   timeout          = 600
   create_namespace = true
