@@ -173,7 +173,7 @@ resource "helm_release" "kube-system" {
   name       = "linkerd-cni"
   namespace  = "linkerd"
   repository = "https://helm.linkerd.io/stable"
-  version    = "30.3.5"
+  version    = "30.12.1"
   chart      = "linkerd2-cni"
   # create_namespace = 
   #   values = [<<EOF
